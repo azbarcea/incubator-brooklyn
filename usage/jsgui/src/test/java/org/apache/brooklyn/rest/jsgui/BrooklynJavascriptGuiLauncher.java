@@ -53,16 +53,27 @@ public class BrooklynJavascriptGuiLauncher {
         // For Eclipse, use the default option of ${workspace_loc:brooklyn-jsgui}.
         // If the working directory is not set correctly, Brooklyn will be unable to find the jsgui .war
         // file and the 'gui not available' message will be shown.
-        startJavascriptAndRest();
+        // startJavascriptAndRest();
+        startJavascriptAndRestWithDefaultCatalog();
         
         log.info("Press Ctrl-C to quit.");
     }
     
     final static int FAVOURITE_PORT = 8080;
-    
-    /** due to the ../jsgui trick in {@link BrooklynRestApiLauncher} we can just call that method */ 
+
+    /**
+     * due to the ../jsgui trick in {@link BrooklynRestApiLauncher} we can just call that method
+     *  - used to test with an empty Catalog
+     */
     public static Server startJavascriptAndRest() throws Exception {
         return BrooklynRestApiLauncher.startRestResourcesViaFilter();
+    }
+
+    /**
+     * - used to test with a the Default Catalog
+     */
+    public static Server startJavascriptAndRestWithDefaultCatalog() throws Exception {
+        return BrooklynRestApiLauncher.startRestResourcesViaFilterWithDefaultCatalog();
     }
 
     /** not much fun without a REST client. but TODO we should make it so the REST endpoint can be configured. */

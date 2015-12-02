@@ -269,3 +269,20 @@ textarea {
     content: 'Not Available';
     */
 }
+
+button.catalog-submit-button.btn {
+    margin-top: 10px;
+}
+
+.CodeMirror .cm-s-default {
+    height: 560px;
+}
+
+.CodeMirror .CodeMirror-placeholder {
+    color: #999;
+}
+
+.margin-fix {
+    margin-left: 20px;
+    margin-top: 10px;
++}
