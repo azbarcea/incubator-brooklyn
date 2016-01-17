@@ -65,6 +65,10 @@ public class BrooklynJavascriptGuiLauncher {
         return BrooklynRestApiLauncher.startRestResourcesViaFilter();
     }
 
+    public static Server startJavascriptAndRestWithDefaultCatalog() throws Exception {
+        return BrooklynRestApiLauncher.startRestResourcesViaFilterWithDefaultCatalog();
+    }
+    
     /** not much fun without a REST server. 
      * but TODO we should make it so a different REST endpoint could be configured. 
      * or better, use node js launchers in that project (likely to come with a new ui.) 
