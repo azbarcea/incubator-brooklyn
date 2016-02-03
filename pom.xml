@@ -231,6 +231,7 @@
         <module>usage/cli</module>
         <module>usage/dist</module>
         <module>usage/jsgui</module>
+        <module>usage/jsgui2</module>
         <module>usage/launcher</module>
         <module>usage/logback-includes</module>
         <module>usage/logback-xml</module>
